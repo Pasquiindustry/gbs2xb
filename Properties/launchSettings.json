@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "gbs2xb": {
+      "commandName": "MsixPackage"
+    }
+  }
+}
