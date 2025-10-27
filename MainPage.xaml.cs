@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Threading.Tasks;
 using Windows.System;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
@@ -43,6 +44,8 @@ namespace gbs2xb
             UiWebView.CoreWebView2.Settings.IsStatusBarEnabled = false;
             UiWebView.CoreWebView2.Settings.IsReputationCheckingRequired = false;
             UiWebView.CoreWebView2.Settings.AreDevToolsEnabled = false;
+            UiWebView.CoreWebView2.Settings.IsSwipeNavigationEnabled = false;
+            UiWebView.CoreWebView2.Settings.IsReputationCheckingRequired = false;
 
             // Create a local host for the game. Replace "mygbstudio.game" string with what you want
             UiWebView.CoreWebView2.SetVirtualHostNameToFolderMapping(
@@ -76,12 +79,12 @@ namespace gbs2xb
 
         async void CoreWindow_KeyUp(CoreWindow sender, KeyEventArgs args)
         {
-            SendKeyToWebView(args, true);
+            await SendKeyToWebView(args, true);
         }
 
         async void CoreWindow_KeyDown(CoreWindow sender, KeyEventArgs args)
         {
-            SendKeyToWebView(args, false);
+            await SendKeyToWebView(args, false);
         }
 
         /// <summary>
@@ -89,7 +92,7 @@ namespace gbs2xb
         /// </summary>
         /// <param name="args">The same KeyEventArgs of the CoreWindow events</param>
         /// <param name="isKeyUp">If true, it's a KeyUp event</param>
-        async void SendKeyToWebView(KeyEventArgs args, bool isKeyUp)
+        async Task SendKeyToWebView(KeyEventArgs args, bool isKeyUp)
         {
             // Initialize the parameters
             string? keyJsParam = null;
