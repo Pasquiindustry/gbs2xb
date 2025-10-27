@@ -19,6 +19,9 @@ namespace gbs2xb
             // Wait for the UI to be loaded
             Loaded += MainPage_Loaded;
 
+            // Set the default background color of the WebView2 to black just to avoid seeing white flases. It's an ARGB value
+            Environment.SetEnvironmentVariable("WEBVIEW2_DEFAULT_BACKGROUND_COLOR", "FF000000");
+
             // Enable the timer that will try to enable the audio of the GB Studio emulator
             EnableAudioTimer.Interval = TimeSpan.FromSeconds(1);
             EnableAudioTimer.Tick += EnableAudioTimer_Tick;
