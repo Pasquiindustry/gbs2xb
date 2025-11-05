@@ -19,7 +19,7 @@ namespace gbs2xb
         public App()
         {
             InitializeComponent();
-
+            App.Current.RequiresPointerMode = ApplicationRequiresPointerMode.WhenRequested;
             Suspending += OnSuspending;
         }
 

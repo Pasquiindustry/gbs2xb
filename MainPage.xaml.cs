@@ -45,7 +45,6 @@ namespace gbs2xb
             UiWebView.CoreWebView2.Settings.IsReputationCheckingRequired = false;
             UiWebView.CoreWebView2.Settings.AreDevToolsEnabled = false;
             UiWebView.CoreWebView2.Settings.IsSwipeNavigationEnabled = false;
-            UiWebView.CoreWebView2.Settings.IsReputationCheckingRequired = false;
 
             // Create a local host for the game. Replace "mygbstudio.game" string with what you want
             UiWebView.CoreWebView2.SetVirtualHostNameToFolderMapping(
@@ -98,7 +97,8 @@ namespace gbs2xb
             string? keyJsParam = null;
             string? codeJsParam = null;
 
-            // Check which key is pressed. These are based on the default values of GB Studio
+            // Check which key is pressed. These are based on the default values of GB Studio.
+            // Note that the B button on the gamepad won't currently work
             switch (args.VirtualKey)
             {
                 case VirtualKey.GamepadDPadDown:
@@ -168,7 +168,6 @@ namespace gbs2xb
                 var evtOptions = {{ key: '{keyJsParam}', code: '{codeJsParam}', keyCode: 0, which: 0, bubbles: true, cancelable: true }};
                 window.dispatchEvent(new KeyboardEvent('{eventJsParam}', evtOptions));
             }})();";
-
 
             // Execute the JS
             await UiWebView.CoreWebView2.ExecuteScriptAsync(jsToExecute);
