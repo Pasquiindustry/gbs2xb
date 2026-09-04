@@ -74,8 +74,7 @@ These are the first things to do. Please refer to the UWP app development for fu
 1. We need to create an Identity on the Microsoft Store. To do this, check the __Release to the Microsoft Store__ section. You need just to reserve a name for now.
 2. Rename the __📁project folder__ and the __📄gbs2xb.sln__ file with the name you prefer. Use a simple name. I like to use the same name.
 3. Open the solution (the .sln file) with Visual Studio 2026.
-4.  Right click on the project (The one with the green [C#] icon) and click __Rename__.
-<br>
+4.  Right click on the project (The one with the green [C#] icon) and click __Rename__.<br>
 ![Renaming the project](Docs/Images/pasquiindustry_gbs2xb_visualstudio_renameproject.png)<br>
 Choose a new name. It can be the same as the solution. We do this from the opened solution so all the references will be updated automatically.
 5. Update these parameters from the __📄Package.appxmanifest__ file
