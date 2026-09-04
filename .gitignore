@@ -11,3 +11,4 @@ packages/
 AppPackages/
 BundleArtifacts/
 *.log
+gbs2xb_TemporaryKey.pfx

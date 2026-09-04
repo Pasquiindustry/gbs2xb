@@ -10,6 +10,7 @@
     Background="Black">
 
     <Grid x:Name="UiLayoutRoot">
-        <controls:WebView2 x:Name="UiWebView" IsHitTestVisible="False" IsTabStop="False" AllowFocusOnInteraction="False" AllowFocusWhenDisabled="False" />
+        <ProgressRing x:Name="UiLoading" Width="96" Height="96" Foreground="#add793" IsActive="True"/>
+        <controls:WebView2 x:Name="UiWebView2" IsHitTestVisible="False" IsTabStop="False" AllowFocusOnInteraction="False" AllowFocusWhenDisabled="False" />
     </Grid>
 </Page>

@@ -1,7 +1,10 @@
 {
   "profiles": {
     "gbs2xb": {
-      "commandName": "MsixPackage"
+      "commandName": "MsixPackage",
+      "remoteDebugEnabled": false,
+      "remoteDebugMachine": "",
+      "authenticationMode": "Universal"
     }
   }
 }
